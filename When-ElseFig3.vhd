@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    21:21:35 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    When-ElseFig3 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,10 +29,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity When-ElseFig3 is
+end When-ElseFig3;
 
-architecture Behavioral of WhenElse is
+architecture Behavioral of When-ElseFig3 is
 
 begin
 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    16:36:14 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    Comparador - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,13 +29,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity Comparador is port(
+	a,b: in std_logic_vector (0 to 1);
+	c: out std_logic);
+end Comparador;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of Comparador is
 begin
-
-
+compara: process (a,b)
+begin
+	if(a=b) then
+	c<='1';
+	else
+	c<='0';
+end if;
+end process;
 end Behavioral;
 

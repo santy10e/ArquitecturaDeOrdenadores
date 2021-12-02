@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    16:46:46 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    CompuertaORIfthenElse - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,13 +29,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity CompuertaORIfthenElse is port(
+	a,b: in std_logic;
+	f: out std_logic);
+end CompuertaORIfthenElse;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of CompuertaORIfthenElse is
 begin
-
-
+compuerta: process(a,b)
+begin
+	if a='0' and b='0' then
+	f <='0'; else
+	if a='1' and b='1' then
+	f <='1'; else
+end if;
+end if;
+end process;
 end Behavioral;
 

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    15:38:45 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    Entidad - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,10 +29,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity Entidad is port(
+	a,b: in std_logic_vector;
+	F: out std_logic);
+end Entidad;
 
-architecture Behavioral of WhenElse is
+architecture Behavioral of Entidad is
 
 begin
 

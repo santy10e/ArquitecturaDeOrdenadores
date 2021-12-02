@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    22:43:25 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    Ejempl3_2 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,12 +29,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity Ejempl3_2 is port(
+	A,B,C: in std_logic;
+	x,y,z: out std_logic);
+end Ejempl3_2;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of Ejempl3_2 is
 begin
+
+	x <= ((A and not B and not C) or ( not A and not B and not C) or (not A and not B and not C) or ( A and not B and not C));
+	y <= ((not A and not B and not C) or (A and not B and not C) or ( A and not B and not C));
+	z <= ((not A and not B and not C) or (A and not B and not C) or (not A and not B and not C));
 
 
 end Behavioral;

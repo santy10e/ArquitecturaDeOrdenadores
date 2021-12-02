@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    19:41:58 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    WhenElseE2 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,13 +29,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity WhenElseE2 is port(
+	a,b: in std_logic;
+	f: out std_logic);
+end WhenElseE2;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of WhenElseE2 is
 begin
-
+	f <= '1' when a='1' and b='1' else
+			'0';
 
 end Behavioral;
 

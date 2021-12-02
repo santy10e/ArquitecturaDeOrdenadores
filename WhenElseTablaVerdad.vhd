@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    22:09:15 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    WhenElseTablaVerdad - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,12 +29,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity WhenElseTablaVerdad is port(
+	a,b,c,d: in std_logic;
+	f: out std_logic);
+end WhenElseTablaVerdad;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of WhenElseTablaVerdad is
 begin
+	f <= '1' when (d='0' and c='1' and b='0' and a='0') else
+			'1' when (d='0' and c='1' and b='0' and a='1') else
+			'1' when (d='1' and c='1' and b='1' and a='0') else
+			'1' when (d='0' and c='1' and b='1' and a='1') else
+			'0';
 
 
 end Behavioral;

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    16:54:04 12/01/2021 
+-- Create Date:    23:15:35 12/01/2021 
 -- Design Name: 
--- Module Name:    WhenElse - Behavioral 
+-- Module Name:    Ejemplo3_3WSW - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,13 +29,30 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity WhenElse is
-end WhenElse;
+entity Ejemplo3_3WSW is port(
+	x: in std_logic_vector(0 to 3);
+	f: out std_logic);
+end Ejemplo3_3WSW;
 
-architecture Behavioral of WhenElse is
-
+architecture Behavioral of Ejemplo3_3WSW is
 begin
-
+	with x select 
+	f<='0' when "0000",
+		'1' when "0001",
+		'1' when "0010",
+		'1' when "0100",
+		'0' when "0100",
+		'1' when "0101",
+		'0' when "0110",
+		'1' when "0111",
+		'0' when "1000",
+		'0' when "1001",
+		'0' when "1010",
+		'1' when "1011",
+		'0' when "1100",
+		'1' when "1101",
+		'0' when "1110",
+		'0' when others;
 
 end Behavioral;
 
